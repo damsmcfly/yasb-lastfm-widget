@@ -16,7 +16,7 @@ Make sure to replace:
 - ```<___CHANGE_PATH_HERE___>``` with the full path to the``` lastfm-widget.ps1``` file you just created  
 - ```<___CHANGE_USERNAME_HERE___>``` with your Last.fm username
 
-Then in your ```config.yaml```, chose the position of the lastfm widget (left[], center[], right[])
+Then in your ```config.yaml```, chose the position of the lastfm widget (```left[]```, ```center[]```, ```right[]```)
 
 ## 3. YASB's styles.css
 If you’d like to color the icon using Last.fm’s signature red, add the content of ```styles.css``` to your own ```styles.css```
