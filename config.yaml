@@ -1,0 +1,18 @@
+lastfm:
+    type: "yasb.custom.CustomWidget"
+    options:
+      label: "<span>\uf202</span> {data[playcount]}"
+      label_alt: "<span>\uf202</span> {data[username]}, user since {data[registered]}"
+      class_name: "lastfm-widget"
+      tooltip: true
+      tooltip_label: "<b>{data[username]}</b> (last.fm)<br><small><i>user since {data[registered]}</i></small><hr><span>\uf202</span> <b>Scrobbles:</b> {data[playcount]}<hr><span>\ued35</span> <b>Artists:</b> {data[artist_count]}<br><span>\udb81\uddee</span> <b>Albums:</b> {data[album_count]}<br><span>\udb81\udf5a</span><b>Tracks:</b> {data[track_count]}"
+      exec_options:
+        run_cmd: >
+          powershell -NoProfile -File C:\<___CHANGE_PATH_HERE___>\lastfm-widget.ps1
+        run_interval: 300000   # every 5 minutes
+        return_format: "json"
+        hide_empty: false
+        use_shell: true
+      callbacks:
+        on_left: "exec cmd /c start https://www.last.fm/user/<___CHANGE_USERNAME_HERE___>"
+        on_middle: "toggle_label"
