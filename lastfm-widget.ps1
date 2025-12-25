@@ -1,16 +1,22 @@
 $ProgressPreference = 'SilentlyContinue'
 
+# Configuration
+$api_key = "<CHANGE_API_KEY_HERE>"
+$user = "<CHANGE_USERNAME_HERE>"
+$period = "7day"
+$limit = 5
+
 # Fetch user info
-$userInfo = Invoke-RestMethod 'https://ws.audioscrobbler.com/2.0/?method=user.getinfo&user=<CHANGE_USERNAME_HERE>&api_key=<CHANGE_API_KEY_HERE>&format=json'
+$userInfo = Invoke-RestMethod "https://ws.audioscrobbler.com/2.0/?method=user.getinfo&user=$user&api_key=$api_key&format=json"
 
 # Fetch top artists
-$topArtists = Invoke-RestMethod 'https://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user=<CHANGE_USERNAME_HERE>&api_key=<CHANGE_API_KEY_HERE>&format=json&limit=5&period=7day'
+$topArtists = Invoke-RestMethod "https://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user=$user&api_key=$api_key&format=json&limit=$limit&period=$period"
 
 # Fetch top albums
-$topAlbums = Invoke-RestMethod 'https://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=<CHANGE_USERNAME_HERE>&api_key=<CHANGE_API_KEY_HERE>&format=json&limit=5&period=7day'
+$topAlbums = Invoke-RestMethod "https://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=$user&api_key=$api_key&format=json&limit=$limit&period=$period"
 
 # Fetch top tracks
-$topTracks = Invoke-RestMethod 'https://ws.audioscrobbler.com/2.0/?method=user.gettoptracks&user=<CHANGE_USERNAME_HERE>&api_key=<CHANGE_API_KEY_HERE>&format=json&limit=5&period=7day'
+$topTracks = Invoke-RestMethod "https://ws.audioscrobbler.com/2.0/?method=user.gettoptracks&user=$user&api_key=$api_key&format=json&limit=$limit&period=$period"
 
 # Extract user info
 $playcount =       [int64]$userInfo.user.playcount
