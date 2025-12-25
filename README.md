@@ -5,7 +5,7 @@ Last.fm widget for YASB
 
 
 ## 1.  Create a file named lastfm-widget.ps1
-Add the following content to the file. Be sure to replace <___CHANGE_API_KEY_HERE___> with your [last.fm API key](https://www.last.fm/api/account/create)) and <___CHANGE_USERNAME_HERE___> with your Last.fm username.
+Add the following content to the file. Be sure to replace <___CHANGE_API_KEY_HERE___> with your [last.fm API key](https://www.last.fm/api/account/create) and <___CHANGE_USERNAME_HERE___> with your Last.fm username.
 Save the file to a folder, it will be needed for step 2.
 ```
 $ProgressPreference = 'SilentlyContinue'
