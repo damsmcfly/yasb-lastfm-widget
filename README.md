@@ -5,12 +5,15 @@ Last.fm widget for YASB
 
 
 ## 1.  lastfm-widget.ps1
-Save this file to a folder, it will be needed for step 2.  
+Save this file to a folder, it will be needed for step 3.  
 Be sure to replace:  
 - ```<CHANGE_API_KEY_HERE>``` with your [last.fm API key](https://www.last.fm/api/account/create)
-- ```<CHANGE_USERNAME_HERE>``` with your Last.fm username. 
+- ```<CHANGE_USERNAME_HERE>``` with your Last.fm username.
 
-## 2. YASB's config.yaml
+## 2.  lastfm-widget.cmd
+Save this file to the same folder folder.  
+
+## 3. YASB's config.yaml
 Copy/Paste the code of ```config.yaml``` in your own ```config.yaml``` file.  
 Make sure to replace:  
 - ```<___CHANGE_PATH_HERE___>``` with the full path to the ```lastfm-widget.ps1``` file you just created  
