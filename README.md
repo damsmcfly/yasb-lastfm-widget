@@ -16,7 +16,7 @@ Save this file to the same folder folder.
 ## 3. YASB's config.yaml
 Copy/Paste the code of ```config.yaml``` in your own ```config.yaml``` file.  
 Make sure to replace:  
-- ```<___CHANGE_PATH_HERE___>``` with the full path to the ```lastfm-widget.ps1``` file you just created  
+- ```<___CHANGE_PATH_HERE___>``` with the full path to the ```lastfm-widget.cmd``` file you just saved  
 - ```<___CHANGE_USERNAME_HERE___>``` with your Last.fm username
 
 Then in your ```config.yaml```, chose the position of the ```lastfm``` widget (```left[]```, ```center[]```, ```right[]```), like in this example:
