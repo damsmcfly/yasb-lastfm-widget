@@ -7,8 +7,7 @@ lastfm:
       tooltip: true
       tooltip_label: "<b>{data[username]}</b> (last.fm)<br><small><i>user since {data[registered]}</i></small><hr><span>\uf202</span>&nbsp;&nbsp;<b>Scrobbles:</b> {data[playcount]}<hr><span>\ued35</span>&nbsp;&nbsp;&nbsp;&nbsp;<b>Artists:</b> {data[artist_count]}<br><span>\udb81\uddee</span>&nbsp;&nbsp;&nbsp;&nbsp;<b>Albums:</b> {data[album_count]}<br><span>\udb81\udf5a</span>&nbsp;&nbsp;&nbsp;&nbsp;<b>Tracks:</b> {data[track_count]}<hr><span>\ued35</span>&nbsp;&nbsp;&nbsp;&nbsp;<b>Top artists (7 days):</b> <br>{data[top_artists]}<hr><span>\udb81\uddee</span>&nbsp;&nbsp;&nbsp;&nbsp;<b>Top albums (7 days):</b> <br>{data[top_albums]}<hr><span>\udb81\udf5a</span>&nbsp;&nbsp;&nbsp;&nbsp;<b>Top tracks (7 days):</b> <br>{data[top_tracks]}"
       exec_options:
-        run_cmd: >
-          powershell -NoProfile -File C:\<___CHANGE_PATH_HERE___>\lastfm-widget.ps1
+        run_cmd: C:\<___CHANGE_PATH_HERE___>\lastfm-widget.cmd
         run_interval: 300000   # every 5 minutes
         return_format: "json"
         hide_empty: false
@@ -17,6 +16,7 @@ lastfm:
         on_left: "exec cmd /c start https://www.last.fm/user/<___CHANGE_USERNAME_HERE___>"
 
         on_middle: "toggle_label"
+
 
 
 
