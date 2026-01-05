@@ -1,3 +1,5 @@
+[Console]::OutputEncoding = [System.Text.UTF8Encoding]::new($false)
+
 $ProgressPreference = 'SilentlyContinue'
 
 # Configuration
@@ -71,3 +73,4 @@ $output = @{
 
 # Output as JSON
 $output | ConvertTo-Json -Compress
+
